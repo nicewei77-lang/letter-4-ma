@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엄마 생일 편지 💌</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 떨어지는 하트 배경 -->
+    <div class="hearts-container"></div>
+
+    <div class="container">
+        <!-- 비밀번호 입력 화면 -->
+        <div class="password-wrapper" id="passwordWrapper">
+            <div class="password-box">
+                <h1 class="password-title">비밀번호를 입력하세요</h1>
+                <input type="password" id="passwordInput" class="password-input" placeholder="비밀번호 입력" maxlength="10">
+                <div class="password-error" id="passwordError"></div>
+                <button class="password-btn" onclick="checkPassword()">확인</button>
+            </div>
+        </div>
+
+        <!-- 연도 선택 리스트 -->
+        <div class="year-selector" id="yearSelector" style="display: none;">
+            <h1 class="main-title">엄마에게 보내는 편지</h1>
+            <div class="year-list">
+                <button class="year-btn" data-year="2025">
+                    <span class="year">2025년</span>
+                    <span class="date">생일 편지</span>
+                </button>
+                <button class="year-btn" data-year="2026">
+                    <span class="year">2026년</span>
+                    <span class="date">생일 편지</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 편지 봉투 (초기 화면) -->
+        <div class="envelope-wrapper" id="envelopeWrapper" style="display: none;">
+            <!-- 뒤로 가기 버튼 -->
+            <button class="back-btn envelope-back-btn" onclick="goBack()">
+                ← 다시 선택하기
+            </button>
+            <div class="envelope" id="envelope">
+                <div class="envelope-front">
+                    <div class="stamp">💌</div>
+                    <div class="envelope-text">엄마에게</div>
+                    <div class="envelope-year" id="envelopeYear"></div>
+                    <div class="click-hint">클릭하세요 👆</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 편지 내용 (펼쳐진 후) -->
+        <div class="letter-content-wrapper" id="letterContent">
+            <!-- 뒤로 가기 버튼 -->
+            <button class="back-btn" id="backBtn" onclick="goBack()">
+                ← 다시 선택하기
+            </button>
+            <div class="letter-paper">
+                <!-- 타이핑 편지 -->
+                <section class="section typed-section fade-in">
+                    <h2>엄마에게</h2>
+                    <div class="typed-letter" id="typedLetter">
+                        <!-- 동적으로 로드됨 -->
+                    </div>
+                </section>
+
+                <!-- 손편지 이미지 -->
+                <section class="section handwritten-section fade-in" id="handwrittenSection">
+                    <div class="hand-letter">
+                        <img id="handwrittenImage" src="" alt="손편지">
+                    </div>
+                </section>
+
+                <!-- 사진 갤러리 -->
+                <section class="section gallery-section fade-in" id="gallerySection">
+                    <h3>추억의 사진들 📸</h3>
+                    <div class="photo-gallery">
+                        <div class="photo-slider" id="photoSlider">
+                            <!-- 동적으로 로드됨 -->
+                        </div>
+                        <div class="photo-dots" id="photoDots"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- 소리 효과 -->
+    <audio id="paperSound" preload="auto">
+        <source src="sounds/paper-open.mp3" type="audio/mpeg">
+        <source src="sounds/paper-open.ogg" type="audio/ogg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
