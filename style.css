@@ -4,8 +4,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: '나눔손글씨 가람연꽃';
+    src: local('나눔손글씨 가람연꽃'),
+         local('NanumSonGeulSsiGaramYeonGgot'),
+         url('./나눔손글씨 가람연꽃.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
-    font-family: 'Pretendard', 'Nanum Myeongjo', 'Nanum Pen Script', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     overflow-x: hidden;
@@ -70,7 +80,7 @@ body {
     color: #333;
     margin-bottom: 30px;
     font-weight: 700;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
 }
 
 .password-input {
@@ -80,7 +90,7 @@ body {
     border: 2px solid #e0e0e0;
     border-radius: 10px;
     margin-bottom: 15px;
-    font-family: 'Pretendard', 'Nanum Myeongjo', sans-serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     text-align: center;
     transition: border-color 0.3s ease;
 }
@@ -95,7 +105,7 @@ body {
     font-size: 0.9rem;
     min-height: 20px;
     margin-bottom: 10px;
-    font-family: 'Pretendard', 'Nanum Myeongjo', sans-serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
 }
 
 .password-btn {
@@ -107,7 +117,7 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-family: 'Pretendard', 'Nanum Myeongjo', sans-serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
@@ -137,7 +147,7 @@ body {
     margin-bottom: 50px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     animation: fadeInDown 1s ease;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     font-weight: 700;
 }
 
@@ -157,7 +167,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -274,7 +284,7 @@ body {
     font-weight: 700;
     z-index: 2;
     position: relative;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
 }
 
 .envelope-year {
@@ -284,7 +294,7 @@ body {
     margin-top: 10px;
     z-index: 2;
     position: relative;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
 }
 
 .click-hint {
@@ -295,7 +305,7 @@ body {
     animation: blink 1.5s infinite;
     position: relative;
     z-index: 2;
-    font-family: 'Pretendard', 'Nanum Myeongjo', sans-serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
 }
 
 @keyframes blink {
@@ -324,7 +334,7 @@ body {
     padding: 12px 20px;
     border-radius: 25px;
     cursor: pointer;
-    font-family: 'Pretendard', 'Nanum Myeongjo', sans-serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     font-size: 1.1rem;
     color: #333;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
@@ -373,7 +383,7 @@ body {
     color: #333;
     margin-bottom: 20px;
     text-align: center;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     font-weight: 700;
 }
 
@@ -382,7 +392,7 @@ body {
     color: #333;
     margin-bottom: 20px;
     text-align: center;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
     font-weight: 700;
 }
 
@@ -393,7 +403,7 @@ body {
     color: #333;
     text-align: left;
     padding: 20px 0;
-    font-family: 'Nanum Myeongjo', 'Pretendard', serif;
+    font-family: '나눔손글씨 가람연꽃', serif;
 }
 
 /* 손편지 이미지 */
